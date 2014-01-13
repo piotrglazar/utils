@@ -3,12 +3,12 @@ package com.piotrglazar.algorithm;
 import static com.piotrglazar.algorithm.Heaps.heapSort;
 import static com.piotrglazar.algorithm.Heaps.isMaxHeap;
 import static com.piotrglazar.algorithm.MaxHeap.buildHeap;
+import static com.piotrglazar.algorithm.TestUtils.integerComparator;
 import static java.util.Arrays.asList;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -19,14 +19,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class MaxHeapTest {
-
-	private Comparator<Integer> integerComparator = new Comparator<Integer>() {
-
-		@Override
-		public int compare(Integer o1, Integer o2) {
-			return o1.compareTo(o2);
-		}
-	};
 
 	private MaxHeap<Integer> heap;
 
